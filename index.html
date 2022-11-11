@@ -28,7 +28,7 @@
                 <ul class="site-nav">
                     <li class="site-nav-item"><a class="current site-nav-link link" href="./index.html">Студія</a></li>
                     <li class="site-nav-item"><a class="site-nav-link link" href="./portfolio.html">Портфоліо</a></li>
-                    <li class="site-nav-item"><a class="site-nav-link link" href="">Контакти</a></li>
+                    <li class="site-nav-item"><a class="site-nav-link link" href="#">Контакти</a></li>
                 </ul>
             </nav>
             <ul class="auth-nav">
@@ -58,7 +58,7 @@
             <div class="container hero-container">
                 <h1 class="hero-title">Ефективні рішення для вашего бізнесу</h1>
                 <!--Кнопка Замовити послугу-->
-                <button class="hero-button" type="button">Замовити послугу</button>
+                <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
 
@@ -115,12 +115,20 @@
             <div class="container">
                 <h2 class="job">Чим ми займаємся</h2>
                 <ul class="job-img">
-                    <li class="job-item"> <img src="./images/kod.jpg" alt="написання коду" width="370" height="294">
+                    <li class="job-item"> 
+                        <img src="./images/kod.jpg" alt="написання коду" width="370" height="294">
+                        <p class="backdrop-job">Десктопні додатки</p>
                     </li>
-                    <li class="job-item"> <img src="./images/adaptive.jpg" alt="адаптивна верстка" width="370"
-                            height="294"> </li>
-                    <li class="job-item"> <img src="./images/pixel.jpg" alt="оптимізація зображень" width="370"
-                            height="294"> </li>
+                    <li class="job-item"> 
+                        <img src="./images/adaptive.jpg" alt="адаптивна верстка" width="370"
+                            height="294"> 
+                            <p class="backdrop-job">Мобільні додатки</p>
+                    </li>
+                    <li class="job-item"> 
+                        <img src="./images/pixel.jpg" alt="оптимізація зображень" width="370"
+                            height="294"> 
+                        <p class="backdrop-job">Дизайнерські рішення</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -415,15 +423,17 @@
         </div>
 
     </footer>
-<div class="backdrop">
+<div class="backdrop is-hidden" data-modal>
     <div class="modal">
-        <button class="modal-close-btn">
+        <button type="button" class="modal-close-btn" data-modal-close>
             <svg class="modal-close-icon" width="11" height="11">
-                <use href="./images/symbol-defs.svg#icon-close"
+                <use href="./images/symbol-defs.svg#icon-close"></use>
             </svg>
         </button>
     </div>
 </div>
+
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
